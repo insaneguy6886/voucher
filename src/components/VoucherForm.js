@@ -14,6 +14,7 @@ const VoucherForm = () => {
     if (voucher === "sheryl") {
       toast.success("Tèn ten! Chúc bạn xài voucher vui vẻ ^^", {
         position: "top-right",
+        onClose: celebrateEffect,
       });
     } else {
       toast.error("Voucher không đúng, vui lòng kiểm tra lại!", {
@@ -28,6 +29,16 @@ const VoucherForm = () => {
     }
   };
 
+  const celebrateEffect = () => {
+    const fireworks = document.createElement("div");
+    fireworks.className = "fireworks";
+    document.body.appendChild(fireworks);
+
+    setTimeout(() => {
+      document.body.removeChild(fireworks);
+    }, 5000);
+  };
+
   return (
     <div className="form-container">
       <h2 className="form-header">Voucher siêu cấp xịn xò</h2>
@@ -39,6 +50,7 @@ const VoucherForm = () => {
         value={voucher}
         onChange={handleVoucherChange}
         onKeyPress={handleKeyPress}
+        maxLength={6}
       />
 
       <button className="apply-button" onClick={handleApplyVoucher}>
