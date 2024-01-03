@@ -1,0 +1,74 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("./../public/img/bg.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.input-field {
+  width: 93%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: #3490dc;
+    outline: none;
+  }
+
+  &.error {
+    border-color: #e53e3e;
+  }
+}
+
+.apply-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #3490dc;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.apply-button:hover {
+  background-color: #2779bd;
+}
+
+.success-message {
+  margin-top: 1rem;
+  color: #38a169;
+  font-weight: bold;
+  text-align: center;
+}
