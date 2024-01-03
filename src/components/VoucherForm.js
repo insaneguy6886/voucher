@@ -30,7 +30,7 @@ const VoucherForm = () => {
 
   return (
     <div className="form-container">
-      <h2 className="form-header">Nhập voucher</h2>
+      <h2 className="form-header">Voucher siêu cấp xịn xò</h2>
 
       <input
         className="input-field"
